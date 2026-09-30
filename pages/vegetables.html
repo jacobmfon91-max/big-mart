@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Vegetables – Big Mart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/mart.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+</head>
+<body data-category="vegetables">
+
+  <!-- ===== LAYOUT: HEADER + MOBILE MENU ===== -->
+  <div id="layout-header"></div>
+
+  <!-- ================= CATEGORY BANNER ================= -->
+  <section class="category-banner">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../mart.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../mart.html">Categories</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Fresh Vegetables</span>
+      </nav>
+
+      <h1 class="banner-title">Fresh Vegetables</h1>
+      <p class="banner-subtitle">Crisp, colorful and packed with nutrients - straight from the farm</p>
+      <span class="banner-count" id="bannerCount">6 Products</span>
+    </div>
+  </section>
+
+  <!-- ================= SHOP ================= -->
+  <section class="shop">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- ===== FILTER SIDEBAR ===== -->
+        <aside class="filter-sidebar" id="filterSidebar">
+
+          <div class="filter-header">
+            <h3>Filters</h3>
+            <button class="clear-filters" id="clearFilters">Clear All</button>
+          </div>
+
+          <!-- Categories -->
+          <div class="filter-group">
+            <button class="filter-group-header" type="button">
+              <span>Categories</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-group-body">
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="fruits" checked />
+                <span>Fruits</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="vegetables" />
+                <span>Vegetables</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="dairy" />
+                <span>Dairy &amp; Eggs</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="bakery" />
+                <span>Bakery</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="beverages" />
+                <span>Beverages</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="category" value="snacks" />
+                <span>Snacks</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="filter-group">
+            <button class="filter-group-header" type="button">
+              <span>Price Range</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-group-body">
+              <div class="price-range">
+                <input type="range" min="0" max="100" value="100" id="priceRange" />
+                <div class="price-range-values">
+                  <span>$0</span>
+                  <span id="priceMaxLabel">$100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rating -->
+          <div class="filter-group">
+            <button class="filter-group-header" type="button">
+              <span>Rating</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-group-body">
+              <label class="filter-check">
+                <input type="radio" name="rating" data-filter="rating" value="4" />
+                <span class="stars">★★★★☆ <span class="muted">&amp; up</span></span>
+              </label>
+              <label class="filter-check">
+                <input type="radio" name="rating" data-filter="rating" value="3" />
+                <span class="stars">★★★☆☆ <span class="muted">&amp; up</span></span>
+              </label>
+              <label class="filter-check">
+                <input type="radio" name="rating" data-filter="rating" value="0" checked />
+                <span class="stars">All ratings</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Availability -->
+          <div class="filter-group">
+            <button class="filter-group-header" type="button">
+              <span>Availability</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="filter-group-body">
+              <label class="filter-check">
+                <input type="checkbox" data-filter="stock" value="instock" />
+                <span>In Stock</span>
+              </label>
+              <label class="filter-check">
+                <input type="checkbox" data-filter="stock" value="sale" />
+                <span>On Sale</span>
+              </label>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ===== MAIN SHOP AREA ===== -->
+        <main class="shop-main">
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="toolbar-left">
+              <button class="filters-toggle" id="filtersToggle" aria-label="Open filters">
+                <i class="fa-solid fa-sliders"></i> Filters
+              </button>
+              <span class="toolbar-count" id="toolbarCount">Showing 0 products</span>
+            </div>
+
+            <div class="toolbar-right">
+              <label class="sort-label">
+                <span>Sort by:</span>
+                <select class="sort-select" id="sortSelect">
+                  <option value="popular">Popular</option>
+                  <option value="price-asc">Price: Low → High</option>
+                  <option value="price-desc">Price: High → Low</option>
+                  <option value="newest">Newest</option>
+                  <option value="rating">Rating</option>
+                </select>
+              </label>
+
+              <div class="view-toggle">
+                <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                  <i class="fa-solid fa-grip"></i>
+                </button>
+                <button class="view-btn" data-view="list" aria-label="List view">
+                  <i class="fa-solid fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid (populated by shop.js in Phase 3) -->
+          <div class="product-grid" id="productGrid"></div>
+
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAYOUT: FOOTER ===== -->
+  <div id="layout-footer"></div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div class="quick-view-overlay" id="quickViewModal" aria-hidden="true">
+    <div class="quick-view" role="dialog" aria-modal="true">
+      <button class="qv-close" id="qvClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="qv-content" id="qvContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="../shared/layout.js"></script>
+  <script src="../shared/products-data.js"></script>
+  <script src="../js/mart.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/shop.js"></script>
+</body>
+</html>

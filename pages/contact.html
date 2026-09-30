@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Big Mart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/mart.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+</head>
+<body data-page="contact">
+
+  <div id="layout-header"></div>
+
+  <section class="category-banner account-banner">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../mart.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Contact Us</span>
+      </nav>
+      <h1 class="banner-title">Contact Us</h1>
+      <p class="banner-subtitle">Questions, feedback, or just want to say hi? We're all ears.</p>
+    </div>
+  </section>
+
+  <section class="static-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap" data-reveal="left">
+          <h2 class="contact-heading">Send Us a Message</h2>
+          <p class="contact-sub">We usually respond within a few hours.</p>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-grid">
+              <input type="text" id="ctName" placeholder="Your Name" required />
+              <input type="email" id="ctEmail" placeholder="Email Address" required />
+              <input type="text" id="ctSubject" placeholder="Subject" class="full" required />
+              <textarea id="ctMessage" placeholder="Your message..." rows="6" required></textarea>
+            </div>
+            <button type="submit" class="cta-btn contact-submit">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="contact-info-wrap" data-reveal="right">
+          <h2 class="contact-heading">Get in Touch</h2>
+          <p class="contact-sub">Reach us directly — whichever way works for you.</p>
+
+          <ul class="contact-info-list">
+            <li>
+              <span class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <strong>Visit Us</strong>
+                <span>123 Market Street, Lagos, Nigeria</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <strong>Call Us</strong>
+                <span>+234 800 000 0000</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <strong>Email</strong>
+                <span>hello@bigmart.com</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact-info-icon"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon–Sun · 7am – 10pm</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="layout-footer"></div>
+  <div id="layout-modals"></div>
+
+  <script src="../shared/layout.js"></script>
+  <script src="../shared/products-data.js"></script>
+  <script src="../js/mart.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/static-pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product – Big Mart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/mart.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+</head>
+<body data-page="product">
+
+  <div id="layout-header"></div>
+
+  <!-- ================= PRODUCT PAGE ================= -->
+  <section class="product-page">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb product-breadcrumb" id="productBreadcrumb" aria-label="Breadcrumb">
+        <a href="../mart.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="fruits.html" id="crumbCategoryLink">Category</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current" id="crumbProductName">Product</span>
+      </nav>
+
+      <!-- Product main area (populated by JS) -->
+      <div id="productMain"></div>
+
+      <!-- Tabs -->
+      <div class="product-tabs" id="productTabs" style="display:none;">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="description">Description</button>
+          <button class="tab-btn" data-tab="reviews">Reviews</button>
+          <button class="tab-btn" data-tab="shipping">Shipping</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="description">
+          <p id="tabDescription">—</p>
+        </div>
+
+        <div class="tab-panel" data-panel="reviews">
+          <div class="reviews-placeholder">
+            <i class="fa-regular fa-comment-dots"></i>
+            <h4>No reviews yet</h4>
+            <p>Be the first to review this product after your purchase.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="shipping">
+          <ul class="shipping-list">
+            <li><i class="fa-solid fa-truck-fast"></i> <strong>Standard Delivery</strong> — Free · arrives in about 60 minutes.</li>
+            <li><i class="fa-solid fa-bolt"></i> <strong>Express Delivery</strong> — $4.99 · arrives in about 30 minutes.</li>
+            <li><i class="fa-solid fa-shield-halved"></i> <strong>Fresh Guarantee</strong> — Not satisfied? We'll refund or replace.</li>
+            <li><i class="fa-solid fa-rotate-left"></i> <strong>Easy Returns</strong> — Free returns within 24 hours of delivery.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Related products -->
+      <div class="related-products" id="relatedProducts" style="display:none;">
+        <div class="section-header related-header">
+          <span class="section-eyebrow">You May Also Like</span>
+          <h2 class="section-title">Related Products</h2>
+        </div>
+        <div class="product-grid" id="relatedGrid"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="layout-footer"></div>
+  <div id="layout-modals"></div>
+
+  <script src="../shared/layout.js"></script>
+  <script src="../shared/products-data.js"></script>
+  <script src="../js/mart.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/product.js"></script>
+</body>
+</html>

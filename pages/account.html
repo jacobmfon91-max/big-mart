@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account – Big Mart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/mart.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/features.css" />
+</head>
+<body data-page="account">
+
+  <div id="layout-header"></div>
+
+  <!-- ================= ACCOUNT BANNER ================= -->
+  <section class="category-banner account-banner">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../mart.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">My Account</span>
+      </nav>
+      <h1 class="banner-title">My Account</h1>
+      <p class="banner-subtitle">Manage your profile, orders, wishlist, and delivery details.</p>
+    </div>
+  </section>
+
+  <!-- ================= ACCOUNT LAYOUT ================= -->
+  <section class="account-section">
+    <div class="container">
+
+      <!-- Logged-out state -->
+      <div class="account-logged-out" id="accountLoggedOut">
+        <div class="account-logged-out-icon">
+          <i class="fa-solid fa-user-lock"></i>
+        </div>
+        <h2>You're not logged in</h2>
+        <p>Log in to view your account, orders, and wishlist.</p>
+        <button class="account-login-btn" id="accountLoginBtn">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Log In
+        </button>
+      </div>
+
+      <!-- Logged-in content -->
+      <div class="account-layout" id="accountLayout" style="display: none;">
+
+        <!-- SIDEBAR -->
+        <aside class="account-sidebar">
+          <div class="account-user">
+            <div class="account-avatar" id="accountAvatar">S</div>
+            <div class="account-user-info">
+              <strong id="accountName">—</strong>
+              <span id="accountEmail">—</span>
+            </div>
+          </div>
+
+          <nav class="account-nav">
+            <button class="account-tab active" data-tab="profile">
+              <i class="fa-regular fa-user"></i> Profile
+            </button>
+            <button class="account-tab" data-tab="orders">
+              <i class="fa-solid fa-bag-shopping"></i> Orders
+              <span class="account-tab-count" id="ordersCount">0</span>
+            </button>
+            <button class="account-tab" data-tab="wishlist">
+              <i class="fa-regular fa-heart"></i> Wishlist
+              <span class="account-tab-count" id="wishlistCount">0</span>
+            </button>
+            <button class="account-tab" data-tab="addresses">
+              <i class="fa-solid fa-location-dot"></i> Addresses
+            </button>
+            <button class="account-tab account-tab-logout" id="accountLogout">
+              <i class="fa-solid fa-right-from-bracket"></i> Log Out
+            </button>
+          </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="account-main">
+
+          <!-- PROFILE -->
+          <div class="account-panel active" data-panel="profile">
+            <h2 class="panel-title">Profile</h2>
+
+            <div class="profile-card">
+              <div class="profile-row">
+                <span class="profile-label">Full Name</span>
+                <span class="profile-value" id="profileName">—</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Email</span>
+                <span class="profile-value" id="profileEmail">—</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Sign-in Method</span>
+                <span class="profile-value" id="profileProvider">—</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Member Since</span>
+                <span class="profile-value" id="profileSince">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ORDERS -->
+          <div class="account-panel" data-panel="orders">
+            <h2 class="panel-title">Order History</h2>
+            <div id="ordersContainer"></div>
+          </div>
+
+          <!-- WISHLIST -->
+          <div class="account-panel" data-panel="wishlist">
+            <h2 class="panel-title">My Wishlist</h2>
+            <div class="wishlist-grid" id="accountWishlist"></div>
+          </div>
+
+          <!-- ADDRESSES -->
+          <div class="account-panel" data-panel="addresses">
+            <h2 class="panel-title">Delivery Address</h2>
+
+            <form class="address-form" id="addressForm">
+              <div class="form-grid">
+                <input type="text" id="addrPhone" placeholder="Phone Number" />
+                <input type="text" id="addrCity" placeholder="City" />
+                <input type="text" id="addrLine" placeholder="Street Address" class="full" />
+                <input type="text" id="addrNotes" placeholder="Delivery notes (optional)" class="full" />
+              </div>
+              <button type="submit" class="cta-btn address-save-btn">
+                <i class="fa-solid fa-check"></i> Save Address
+              </button>
+            </form>
+          </div>
+
+        </main>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="layout-footer"></div>
+  <div id="layout-modals"></div>
+
+  <script src="../shared/layout.js"></script>
+  <script src="../shared/products-data.js"></script>
+  <script src="../js/mart.js"></script>
+  <script src="../js/features.js"></script>
+  <script src="../js/account.js"></script>
+</body>
+</html>

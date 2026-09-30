@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Mart - Fresh Groceries</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/mart.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+
+  <div id="layout-header"></div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-slider">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <div class="hero-bg" style="background-image: url('images/hero/slider-1.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">Fresh • Organic • Fast</span>
+          <h1 class="hero-title">Fresh Groceries,<br>Delivered Fast</h1>
+          <p class="hero-subtitle">Get farm-fresh produce at your doorstep in under 60 minutes.</p>
+          <div class="hero-buttons">
+            <a href="#" class="cta-btn hero-cta login-trigger" data-message="Log in to start shopping at Big Mart." data-href="pages/shop.html">Shop Now</a>
+            <a href="#" class="cta-outline login-trigger" data-message="Log in to see today's offers." data-href="pages/shop.html">View Offers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('images/hero/slider-2.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">Straight From The Farm</span>
+          <h1 class="hero-title">100% Organic<br>&amp; Natural</h1>
+          <p class="hero-subtitle">Handpicked from local farms — no chemicals, no compromise.</p>
+          <div class="hero-buttons">
+            <a href="#" class="cta-btn hero-cta login-trigger" data-message="Log in to start shopping at Big Mart." data-href="pages/shop.html">Shop Now</a>
+            <a href="#" class="cta-outline login-trigger" data-message="Log in to see today's offers." data-href="pages/shop.html">View Offers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('images/hero/slider-3.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">Limited Time Offer</span>
+          <h1 class="hero-title">Save Up to 40%<br>This Week</h1>
+          <p class="hero-subtitle">Massive discounts on dairy, bakery, and beverages.</p>
+          <div class="hero-buttons">
+            <a href="#" class="cta-btn hero-cta login-trigger" data-message="Log in to start shopping at Big Mart." data-href="pages/shop.html">Shop Now</a>
+            <a href="#" class="cta-outline login-trigger" data-message="Log in to see today's offers." data-href="pages/shop.html">View Offers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('images/hero/slider-4.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">In Season Now</span>
+          <h1 class="hero-title">Sweet, Juicy,<br>Farm-Fresh Fruits</h1>
+          <p class="hero-subtitle">From mangoes to berries — taste the season.</p>
+          <div class="hero-buttons">
+            <a href="#" class="cta-btn hero-cta login-trigger" data-message="Log in to start shopping at Big Mart." data-href="pages/shop.html">Shop Now</a>
+            <a href="#" class="cta-outline login-trigger" data-message="Log in to see today's offers." data-href="pages/shop.html">View Offers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="hero-slide">
+        <div class="hero-bg" style="background-image: url('images/hero/slider-5.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="hero-eyebrow">New Customer Bonus</span>
+          <h1 class="hero-title">Free Delivery<br>On Your First Order</h1>
+          <p class="hero-subtitle">Sign up today and get your groceries delivered free.</p>
+          <div class="hero-buttons">
+            <a href="#" class="cta-btn hero-cta login-trigger" data-message="Log in to start shopping at Big Mart." data-href="pages/shop.html">Shop Now</a>
+            <a href="#" class="cta-outline login-trigger" data-message="Log in to see today's offers." data-href="pages/shop.html">View Offers</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="hero-arrow prev" aria-label="Previous slide">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero-arrow next" aria-label="Next slide">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="hero-dots">
+      <button class="hero-dot active" data-index="0" aria-label="Go to slide 1"></button>
+      <button class="hero-dot" data-index="1" aria-label="Go to slide 2"></button>
+      <button class="hero-dot" data-index="2" aria-label="Go to slide 3"></button>
+      <button class="hero-dot" data-index="3" aria-label="Go to slide 4"></button>
+      <button class="hero-dot" data-index="4" aria-label="Go to slide 5"></button>
+    </div>
+
+    <a href="#categories" class="scroll-cue" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ================= CATEGORIES ================= -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Browse by Category</span>
+        <h2 class="section-title">Shop From Our Fresh Selection</h2>
+        <p class="section-subtitle">Everything you need — picked fresh, priced right.</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="#" class="category-card login-trigger" data-reveal="left" data-message="Log in to browse Fresh Fruits." data-href="pages/fruits.html">
+          <div class="category-bg" style="background-image: url('images/category/fruits.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Fruits</h3>
+            <span class="category-count">120+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="category-card login-trigger" data-reveal="up" data-message="Log in to browse Fresh Vegetables." data-href="pages/vegetables.html">
+          <div class="category-bg" style="background-image: url('images/category/vegetable.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Vegetables</h3>
+            <span class="category-count">90+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="category-card login-trigger" data-reveal="right" data-message="Log in to browse Dairy & Eggs." data-href="pages/dairy.html">
+          <div class="category-bg" style="background-image: url('images/category/dairy.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Dairy &amp; Eggs</h3>
+            <span class="category-count">60+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="category-card login-trigger" data-reveal="left" data-message="Log in to browse Bakery." data-href="pages/bakery.html">
+          <div class="category-bg" style="background-image: url('images/category/bakery.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Bakery</h3>
+            <span class="category-count">45+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="category-card login-trigger" data-reveal="up" data-message="Log in to browse Beverages." data-href="pages/beverages.html">
+          <div class="category-bg" style="background-image: url('images/category/beverage.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Beverages</h3>
+            <span class="category-count">80+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="#" class="category-card login-trigger" data-reveal="right" data-message="Log in to browse Snacks." data-href="pages/snacks.html">
+          <div class="category-bg" style="background-image: url('images/category/snacks.jpg');"></div>
+          <div class="category-overlay"></div>
+          <div class="category-info">
+            <h3 class="category-name">Snacks</h3>
+            <span class="category-count">150+ items</span>
+            <span class="category-cta">Shop Now <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="view-all-wrap">
+        <a href="#" class="view-all-link login-trigger" data-message="Log in to browse all categories." data-href="pages/shop.html">
+          View All Categories <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Top Picks</span>
+        <h2 class="section-title">Popular Products This Week</h2>
+        <p class="section-subtitle">Loved by our customers — fresh, affordable, and always in stock.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-reveal="left">
+          <div class="product-media">
+            <span class="product-badge">-23%</span>
+            <button class="wishlist-btn" data-product="Organic Avocados" aria-label="Add Organic Avocados to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/avocados.jpg" alt="Organic Avocados" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Fresh Fruits</span>
+            <h3 class="product-name">Organic Avocados</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.8 <span>(124)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$4.99</span>
+                <span class="price-old">$6.50</span>
+              </div>
+              <button class="add-cart-btn" data-product="Organic Avocados">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal="up">
+          <div class="product-media">
+            <span class="product-badge">Best Seller</span>
+            <button class="wishlist-btn" data-product="Fresh Strawberries" aria-label="Add Fresh Strawberries to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/strewberry.jpg" alt="Fresh Strawberries" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Fresh Fruits</span>
+            <h3 class="product-name">Fresh Strawberries</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.9 <span>(210)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$3.49</span>
+              </div>
+              <button class="add-cart-btn" data-product="Fresh Strawberries">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal="right">
+          <div class="product-media">
+            <span class="product-badge">-21%</span>
+            <button class="wishlist-btn" data-product="Whole Milk 1L" aria-label="Add Whole Milk 1L to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/milk.jpg" alt="Whole Milk 1L" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Dairy</span>
+            <h3 class="product-name">Whole Milk 1L</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.7 <span>(89)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$2.20</span>
+                <span class="price-old">$2.80</span>
+              </div>
+              <button class="add-cart-btn" data-product="Whole Milk 1L">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal="left">
+          <div class="product-media">
+            <span class="product-badge">New</span>
+            <button class="wishlist-btn" data-product="Sourdough Bread" aria-label="Add Sourdough Bread to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/bread.jpg" alt="Sourdough Bread" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Bakery</span>
+            <h3 class="product-name">Sourdough Bread</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.6 <span>(76)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$5.50</span>
+              </div>
+              <button class="add-cart-btn" data-product="Sourdough Bread">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal="up">
+          <div class="product-media">
+            <span class="product-badge">-20%</span>
+            <button class="wishlist-btn" data-product="Orange Juice 1L" aria-label="Add Orange Juice 1L to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/orange juice.jpg" alt="Orange Juice 1L" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Beverages</span>
+            <h3 class="product-name">Orange Juice 1L</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.8 <span>(145)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$3.99</span>
+                <span class="price-old">$4.99</span>
+              </div>
+              <button class="add-cart-btn" data-product="Orange Juice 1L">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal="right">
+          <div class="product-media">
+            <button class="wishlist-btn" data-product="Mixed Nuts 500g" aria-label="Add Mixed Nuts 500g to wishlist">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <img src="images/products/nuts.jpg" alt="Mixed Nuts 500g" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Snacks</span>
+            <h3 class="product-name">Mixed Nuts 500g</h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i> 4.5 <span>(60)</span></div>
+            <div class="product-bottom">
+              <div class="product-price">
+                <span class="price-current">$7.25</span>
+              </div>
+              <button class="add-cart-btn" data-product="Mixed Nuts 500g">
+                <i class="fa-solid fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="view-all-wrap">
+        <a href="#" class="view-all-link login-trigger" data-message="Log in to browse all products." data-href="pages/shop.html">
+          View All Products <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="why-choose" id="why-choose">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Why Big Mart</span>
+        <h2 class="section-title">Fresh. Fast. Trusted.</h2>
+        <p class="section-subtitle">Everything we do is designed to make your grocery shopping effortless.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-features">
+          <div class="feature-item" data-reveal="left">
+            <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="feature-text">
+              <h3 class="feature-title">Fresh Every Day</h3>
+              <p class="feature-desc">Sourced from local farms every morning.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" data-reveal="left">
+            <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="feature-text">
+              <h3 class="feature-title">Fast Delivery</h3>
+              <p class="feature-desc">At your door in under 60 minutes.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" data-reveal="left">
+            <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="feature-text">
+              <h3 class="feature-title">Secure Payment</h3>
+              <p class="feature-desc">100% safe checkout — cards, wallets, and more.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" data-reveal="left">
+            <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="feature-text">
+              <h3 class="feature-title">24/7 Support</h3>
+              <p class="feature-desc">Real humans, ready whenever you need help.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-video-wrap">
+          <div class="video-card" data-reveal="right">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="videos/supermarket.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-text">
+              <strong>10,000+</strong>
+              <span>Happy Customers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS + STATS ================= -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Loved by Thousands</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Real stories from real shoppers across Nigeria.</p>
+      </div>
+
+      <div class="stats-band" data-reveal="up">
+        <div class="stat-item">
+          <div class="stat-value">10,000+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">4.9★</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">500+</div>
+          <div class="stat-label">Fresh Products</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">60 min</div>
+          <div class="stat-label">Average Delivery</div>
+        </div>
+      </div>
+
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <button class="testi-arrow prev" aria-label="Previous testimonial">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="testi-arrow next" aria-label="Next testimonial">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="testimonial-track">
+          <div class="testimonial-slide active">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Big Mart has completely changed how I shop. Fresh produce at my door in under an hour, every single time. I don't think I can go back to regular grocery runs."
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img src="images/testimonials/sarah.jpg" alt="Sarah Johnson" loading="lazy" />
+                <div class="author-info">
+                  <strong>Sarah Johnson</strong>
+                  <span>Lagos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "The quality of the fruits and veggies is unmatched. Everything arrives looking like it was just picked. My kids actually ask for more vegetables now!"
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img src="images/testimonials/michael.jpg" alt="Michael Adeyemi" loading="lazy" />
+                <div class="author-info">
+                  <strong>Michael Adeyemi</strong>
+                  <span>Abuja</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="testimonial-quote">
+                "Their customer support is incredible. I had an issue with one item and they resolved it in minutes. Big Mart truly cares about its customers."
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img src="images/testimonials/chioma.jpg" alt="Chioma Okafor" loading="lazy" />
+                <div class="author-info">
+                  <strong>Chioma Okafor</strong>
+                  <span>Port Harcourt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-dots">
+          <button class="testi-dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+          <button class="testi-dot" data-index="1" aria-label="Go to testimonial 2"></button>
+          <button class="testi-dot" data-index="2" aria-label="Go to testimonial 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-band" data-reveal="up">
+        <div class="newsletter-content">
+          <span class="newsletter-eyebrow">
+            <i class="fa-solid fa-envelope-open-text"></i> Newsletter
+          </span>
+          <h2 class="newsletter-title">Get 10% Off Your First Order</h2>
+          <p class="newsletter-subtitle">
+            Subscribe for exclusive deals and fresh updates — delivered weekly.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" autocomplete="email" required />
+            <button type="submit" class="newsletter-btn" id="newsletterBtn">
+              <span class="btn-text">Subscribe</span>
+              <i class="fa-solid fa-arrow-right btn-icon"></i>
+            </button>
+          </form>
+
+          <p class="newsletter-small">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAYOUT: FOOTER + MODALS ===== -->
+  <div id="layout-footer"></div>
+  <div id="layout-modals"></div>
+
+  <script src="shared/layout.js"></script>
+  <script src="shared/products-data.js"></script>
+  <script src="js/mart.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/features.js"></script>
+</body>
+</html>
