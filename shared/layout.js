@@ -14,7 +14,7 @@
      Works from both /index.html and /pages/*.html
      ------------------------------------------------------------ */
   const isSubPage = /\/pages\//.test(window.location.pathname);
-  const HOME = isSubPage ? '../mart.html' : 'mart.html';
+  const HOME = isSubPage ? '../index.html' : 'index.html';
   const CATEGORY_PATH = isSubPage ? '' : 'pages/';
 
   /* ------------------------------------------------------------

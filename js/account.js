@@ -322,6 +322,6 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.removeItem('bigmart_session');
     sessionStorage.removeItem('bigmart_session');
     if (typeof showToast === 'function') showToast('Logged out successfully.', 'info');
-    setTimeout(() => { window.location.href = '../mart.html'; }, 700);
+    setTimeout(() => { window.location.href = '../index.html'; }, 700);
   });
 });
