@@ -15,11 +15,18 @@
   --transition-fast: 0.15s ease;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--charcoal);
   background: var(--white);
-  overflow-x: hidden;
 }
 
 a {
